@@ -1,0 +1,36 @@
+-- Trigger para agregar fecha con funcion NOW() -- 
+
+DELIMITER //
+CREATE TRIGGER tr_tb_pedidos BEFORE INSERT ON tb_pedidos
+FOR EACH ROW
+BEGIN
+    IF NEW.fecha_pedido IS NULL THEN
+        SET NEW.fecha_pedido_default = NOW();
+    END IF;
+END //
+DELIMITER ;
+
+
+
+
+------ 
+DELIMITER //
+
+ 
+
+CREATE PROCEDURE actualizar_precio_producto(IN producto_id INT, IN existencias INT)
+BEGIN
+    DECLARE nuevo_precio NUMERIC(5,2);
+    
+    IF existencias < 10 THEN
+        SET nuevo_precio = (SELECT precio_producto * 1.1 FROM tb_productos WHERE id_producto = producto_id);
+    ELSE
+        SET nuevo_precio = (SELECT precio_producto FROM tb_productos WHERE id_producto = producto_id);
+    END IF;
+    
+    UPDATE tb_productos SET precio_producto = nuevo_precio WHERE id_producto = producto_id;
+END //
+
+ 
+
+DELIMITER ;
