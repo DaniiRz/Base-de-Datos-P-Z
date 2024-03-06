@@ -1,0 +1,206 @@
+DELIMITER //
+
+CREATE PROCEDURE insertar_admin(
+    IN nombre VARCHAR(255),
+    IN apellido VARCHAR(255),
+    IN correo VARCHAR(255),
+    IN clave VARCHAR(255)
+)
+BEGIN
+    
+    INSERT INTO tb_admins (nombre_admin, apellido_admin, correo_admin, clave_admin)
+    VALUES (nombre, apellido, correo, clave);
+    
+END //
+
+DELIMITER ;
+
+
+DELIMITER //
+
+-- Procedimiento para insertar en la tabla tb_categorias
+CREATE PROCEDURE insertar_categoria(
+    IN nombre_categoria VARCHAR(255)
+)
+BEGIN
+    INSERT INTO tb_categorias (nombre_categoria)
+    VALUES (nombre_categoria);
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+-- Procedimiento para insertar en la tabla tb_estado_pedidos
+CREATE PROCEDURE insertar_estado_pedido(
+    IN estado_pedido VARCHAR(50)
+)
+BEGIN
+    INSERT INTO tb_estado_pedidos (estado_pedido)
+    VALUES (estado_pedido);
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+-- Procedimiento para insertar en la tabla tb_estado_valo
+CREATE PROCEDURE insertar_estado_valo(
+    IN estado_valo VARCHAR(50)
+)
+BEGIN
+    INSERT INTO tb_estado_valo (estado_valo)
+    VALUES (estado_valo);
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE insertar_cliente(
+    IN nombre_cliente VARCHAR(255),
+    IN apellido_cliente VARCHAR(255),
+    IN dui_client VARCHAR(255),
+    IN telf_cliente VARCHAR(12),
+    IN correo_cliente VARCHAR(255),
+    IN clave_cliente VARCHAR(255)
+)
+BEGIN
+    INSERT INTO tb_clientes (nombre_cliente, apellido_cliente, dui_client, telf_cliente, correo_cliente, clave_cliente)
+    VALUES (nombre_cliente, apellido_cliente, dui_client, telf_cliente, correo_cliente, clave_cliente);
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+-- Procedimiento para insertar en la tabla tb_direccion_clientes
+CREATE PROCEDURE insertar_direccion_cliente(
+    IN nombre_direccion VARCHAR(255),
+    IN id_cliente INT
+)
+BEGIN
+    INSERT INTO tb_direccion_clientes (nombre_direccion, id_cliente)
+    VALUES (nombre_direccion, id_cliente);
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+
+-- Procedimiento para insertar en la tabla tb_pedidos
+CREATE PROCEDURE insertar_pedido(
+    IN fecha_pedido DATETIME,
+    IN id_estado_pedido INT,
+    IN id_direccion_c INT,
+    IN id_cliente INT
+)
+BEGIN
+    INSERT INTO tb_pedidos (fecha_pedido, id_estado_pedido, id_direccion_c, id_cliente)
+    VALUES (fecha_pedido, id_estado_pedido, id_direccion_c, id_cliente);
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE insertar_sub_categoria(
+    IN nombre_sub_categoria VARCHAR(255),
+    IN id_categoria INT
+)
+BEGIN
+    INSERT INTO tb_sub_categorias (nombre_sub_categoria, id_categoria)
+    VALUES (nombre_sub_categoria, id_categoria);
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE insertar_color(
+    IN nombre_color VARCHAR(255),
+    IN id_sub_categoria INT
+)
+BEGIN
+    INSERT INTO tb_colores (nombre_color, id_sub_categoria)
+    VALUES (nombre_color, id_sub_categoria);
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE insertar_talla(
+    IN numero_talla VARCHAR(255),
+    IN id_sub_categoria INT
+)
+BEGIN
+    INSERT INTO tb_tallas (numero_talla, id_sub_categoria)
+    VALUES (numero_talla, id_sub_categoria);
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE insertar_producto(
+    IN nombre_producto VARCHAR(255),
+    IN desc_producto VARCHAR(255),
+    IN cant_producto INT,
+    IN precio_producto NUMERIC(5,2),
+    IN fecha_registro_produc DATETIME,
+    IN id_sub_categoria INT
+)
+BEGIN
+    INSERT INTO tb_productos (nombre_producto, desc_producto, cant_producto, precio_producto, fecha_registro_produc, id_sub_categoria)
+    VALUES (nombre_producto, desc_producto, cant_producto, precio_producto, fecha_registro_produc, id_sub_categoria);
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE insertar_detalle_producto(
+    IN existencias INT,
+    IN img_producto VARCHAR(255),
+    IN id_color INT,
+    IN id_talla INT,
+    IN id_producto INT
+)
+BEGIN
+    INSERT INTO tb_detalle_productos (existencias, img_producto, id_color, id_talla, id_producto)
+    VALUES (existencias, img_producto, id_color, id_talla, id_producto);
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE insertar_detalle_pedido(
+    IN cantidad_producto INT,
+    IN precio_producto NUMERIC(5,2),
+    IN id_pedido INT,
+    IN id_detalle_producto INT
+)
+BEGIN
+    INSERT INTO tb_detalle_pedido (cantidad_producto, precio_producto, id_pedido, id_detalle_producto)
+    VALUES (cantidad_producto, precio_producto, id_pedido, id_detalle_producto);
+END //
+
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE insertar_valoracion(
+    IN comentario_cliente VARCHAR(255),
+    IN fecha_valoracion DATETIME,
+    IN id_detalle_p INT,
+    IN id_estado_valo INT
+)
+BEGIN
+    INSERT INTO tb_valoracion (comentario_cliente, fecha_valoracion, id_detalle_p, id_estado_valo)
+    VALUES (comentario_cliente, fecha_valoracion, id_detalle_p, id_estado_valo);
+END //
+
+DELIMITER ;
