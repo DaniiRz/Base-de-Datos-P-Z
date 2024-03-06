@@ -1,0 +1,460 @@
+CALL insertar_admin('Juan', 'Lopez', 'juan@example.com', 'password123');
+CALL insertar_admin('María', 'García', 'maria@example.com', 'password456');
+CALL insertar_admin('Pedro', 'Martínez', 'pedro@example.com', 'password789');
+CALL insertar_admin('Laura', 'Rodríguez', 'laura@example.com', 'passwordabc');
+CALL insertar_admin('Carlos', 'Sánchez', 'carlos@example.com', 'passworddef');
+CALL insertar_admin('Ana', 'Pérez', 'ana@example.com', 'passwordghi');
+CALL insertar_admin('Luis', 'Gómez', 'luis@example.com', 'passwordjkl');
+CALL insertar_admin('Elena', 'Fernández', 'elena@example.com', 'passwordmno');
+CALL insertar_admin('David', 'Díaz', 'david@example.com', 'passwordpqr');
+CALL insertar_admin('Sara', 'Ruiz', 'sara@example.com', 'passwordstu');
+CALL insertar_admin('Javier', 'Jiménez', 'javier@example.com', 'passwordvwx');
+CALL insertar_admin('Paula', 'Alvarez', 'paula@example.com', 'passwordyz1');
+CALL insertar_admin('Miguel', 'Hernández', 'miguel@example.com', 'password234');
+CALL insertar_admin('Carmen', 'Torres', 'carmen@example.com', 'password567');
+CALL insertar_admin('Diego', 'Vázquez', 'diego@example.com', 'password890');
+CALL insertar_admin('Eva', 'Romero', 'eva@example.com', 'passwordabc2');
+CALL insertar_admin('Manuel', 'Moreno', 'manuel@example.com', 'passworddef3');
+CALL insertar_admin('Isabel', 'Serrano', 'isabel@example.com', 'passwordghi4');
+CALL insertar_admin('Pablo', 'Ortega', 'pablo@example.com', 'passwordjkl5');
+CALL insertar_admin('Raquel', 'Navarro', 'raquel@example.com', 'passwordmno6');
+CALL insertar_admin('Oscar', 'Molina', 'oscar@example.com', 'passwordpqr7');
+CALL insertar_admin('Natalia', 'Iglesias', 'natalia@example.com', 'passwordstu8');
+CALL insertar_admin('Roberto', 'Garrido', 'roberto@example.com', 'passwordvwx9');
+CALL insertar_admin('Cristina', 'Ramos', 'cristina@example.com', 'passwordyz10');
+CALL insertar_admin('Antonio', 'Gutiérrez', 'antonio@example.com', 'password111');
+
+
+
+-- Inserciones en tb_categorias
+CALL insertar_categoria('Pantalones');
+CALL insertar_categoria('Tops');
+CALL insertar_categoria('Faldas');
+CALL insertar_categoria('Vestidos');
+CALL insertar_categoria('Blusas');
+CALL insertar_categoria('Short');
+
+SELECT * FROM tb_categorias;
+
+-- categoria 1
+CALL insertar_sub_categoria('De cuero', 1);
+CALL insertar_sub_categoria('Mezclilla', 1);
+CALL insertar_sub_categoria('Jooger', 1);
+CALL insertar_sub_categoria('Cargo', 1);
+CALL insertar_sub_categoria('Jeans', 1);
+-- categoria 2
+CALL insertar_sub_categoria('Crop-Tops', 2);
+CALL insertar_sub_categoria('Top sin mangas', 2);
+CALL insertar_sub_categoria('Top con escote bardot', 2);
+CALL insertar_sub_categoria('Top de encaje', 2);
+CALL insertar_sub_categoria('Top asimétrico', 2);
+-- categoria 3
+CALL insertar_sub_categoria('Faldas rectas', 3);
+CALL insertar_sub_categoria('plisadas', 3);
+CALL insertar_sub_categoria('minifaldas', 3);
+CALL insertar_sub_categoria('godet', 3);
+CALL insertar_sub_categoria('cruzadas', 3);
+-- categoria 4
+CALL insertar_sub_categoria('Ajustado', 4);
+CALL insertar_sub_categoria('De tubo', 4);
+CALL insertar_sub_categoria('Cruzado', 4);
+CALL insertar_sub_categoria('Polo', 4);
+CALL insertar_sub_categoria('Recto', 4);
+-- categoria 5
+CALL insertar_sub_categoria('Halter', 5);
+CALL insertar_sub_categoria('Sabrina', 5);
+CALL insertar_sub_categoria('Jewel', 5);
+CALL insertar_sub_categoria('High neck ', 5);
+CALL insertar_sub_categoria('Cuello en V', 5);
+-- categoria 6
+CALL insertar_sub_categoria('Short falda', 6);
+CALL insertar_sub_categoria('Deportivos', 6);
+CALL insertar_sub_categoria('Shorts de mezclilla', 6);
+CALL insertar_sub_categoria('Paper bag shorts', 6);
+CALL insertar_sub_categoria('Biker shorts', 6);
+
+
+CALL insertar_producto('Jeans Negro', 'Jeans de color negro para hombres', 50, 39.99, NOW(), 1);
+CALL insertar_producto('Crop-Top Blanco', 'Crop-Top de color blanco para mujeres', 100, 19.99, NOW(), 2);
+CALL insertar_producto('Faldas plisadas Rosa', 'Falda plisada de color rosa para mujeres', 80, 29.99, NOW(), 3);
+CALL insertar_producto('Polo Ajustado Negro', 'Polo ajustado de color negro para hombres', 70, 24.99, NOW(), 4);
+CALL insertar_producto('Halter Negro', 'Top Halter de color negro para mujeres', 90, 22.99, NOW(), 5);
+CALL insertar_producto('Short falda Negro', 'Short falda de color negro para mujeres', 120, 34.99, NOW(), 6);
+CALL insertar_producto('Jeans Azul', 'Jeans de color azul para hombres', 60, 39.99, NOW(), 1);
+CALL insertar_producto('Top sin mangas Negro', 'Top sin mangas de color negro para mujeres', 110, 17.99, NOW(), 2);
+CALL insertar_producto('Faldas cruzadas Azul', 'Falda cruzada de color azul para mujeres', 85, 27.99, NOW(), 3);
+CALL insertar_producto('Polo De tubo Blanco', 'Polo de tubo de color blanco para hombres', 75, 26.99, NOW(), 4);
+CALL insertar_producto('Sabrina Rojo', 'Top Sabrina de color rojo para mujeres', 95, 21.99, NOW(), 5);
+CALL insertar_producto('Deportivos Negro', 'Short deportivo de color negro para mujeres', 130, 32.99, NOW(), 6);
+CALL insertar_producto('Jeans Gris', 'Jeans de color gris para hombres', 55, 39.99, NOW(), 1);
+CALL insertar_producto('Top con escote bardot Blanco', 'Top con escote bardot de color blanco para mujeres', 105, 18.99, NOW(), 2);
+CALL insertar_producto('Faldas minifaldas Rojo', 'Falda minifalda de color rojo para mujeres', 75, 29.99, NOW(), 3);
+CALL insertar_producto('Polo Cruzado Beige', 'Polo cruzado de color beige para hombres', 65, 25.99, NOW(), 4);
+CALL insertar_producto('Jewel Azul', 'Top Jewel de color azul para mujeres', 100, 23.99, NOW(), 5);
+CALL insertar_producto('Shorts de mezclilla Gris', 'Shorts de mezclilla de color gris para mujeres', 115, 31.99, NOW(), 6);
+CALL insertar_producto('Jeans Marrón', 'Jeans de color marrón para hombres', 45, 39.99, NOW(), 1);
+CALL insertar_producto('Top de encaje Rojo', 'Top de encaje de color rojo para mujeres', 95, 20.99, NOW(), 2);
+CALL insertar_producto('Faldas godet Azul', 'Falda godet de color azul para mujeres', 90, 28.99, NOW(), 3);
+CALL insertar_producto('Polo Polo Verde', 'Polo polo de color verde para hombres', 80, 27.99, NOW(), 4);
+CALL insertar_producto('High neck Blanco', 'Top High neck de color blanco para mujeres', 85, 24.99, NOW(), 5);
+CALL insertar_producto('Paper bag shorts Azul', 'Shorts paper bag de color azul para mujeres', 125, 33.99, NOW(), 6);
+CALL insertar_producto('Paper bag shorts Morado', 'Shorts paper bag de color azul para mujeres', 125, 33.99, NOW(), 6);
+
+SELECT* FROM tb_productos;
+
+
+-- Para la subcategoría 1
+CALL insertar_color('Negro', 1);
+CALL insertar_color('Azul', 1);
+CALL insertar_color('Gris', 1);
+CALL insertar_color('Marrón', 1);
+CALL insertar_color('Blanco', 1);
+
+-- Para la subcategoría 2
+CALL insertar_color('Negro', 2);
+CALL insertar_color('Blanco', 2);
+CALL insertar_color('Rojo', 2);
+CALL insertar_color('Verde', 2);
+CALL insertar_color('Amarillo', 2);
+
+-- Para la subcategoría 3
+CALL insertar_color('Negro', 3);
+CALL insertar_color('Blanco', 3);
+CALL insertar_color('Rojo', 3);
+CALL insertar_color('Rosa', 3);
+CALL insertar_color('Azul', 3);
+
+-- Para la subcategoría 4
+CALL insertar_color('Negro', 4);
+CALL insertar_color('Blanco', 4);
+CALL insertar_color('Gris', 4);
+CALL insertar_color('Beige', 4);
+CALL insertar_color('Verde', 4);
+
+-- Para la subcategoría 5
+CALL insertar_color('Negro', 5);
+CALL insertar_color('Blanco', 5);
+CALL insertar_color('Rojo', 5);
+CALL insertar_color('Azul', 5);
+CALL insertar_color('Rosa', 5);
+
+-- Para la subcategoría 6
+CALL insertar_color('Negro', 6);
+CALL insertar_color('Blanco', 6);
+CALL insertar_color('Gris', 6);
+CALL insertar_color('Azul', 6);
+CALL insertar_color('Verde', 6);
+
+-- Para la subcategoría 1
+CALL insertar_talla('XS', 1);
+CALL insertar_talla('S', 1);
+CALL insertar_talla('M', 1);
+CALL insertar_talla('L', 1);
+CALL insertar_talla('XL', 1);
+
+-- Para la subcategoría 2
+CALL insertar_talla('32', 2);
+CALL insertar_talla('34', 2);
+CALL insertar_talla('36', 2);
+CALL insertar_talla('38', 2);
+CALL insertar_talla('40', 2);
+
+-- Para la subcategoría 3
+CALL insertar_talla('XS', 3);
+CALL insertar_talla('S', 3);
+CALL insertar_talla('M', 3);
+CALL insertar_talla('L', 3);
+CALL insertar_talla('XL', 3);
+
+-- Para la subcategoría 4
+CALL insertar_talla('30', 4);
+CALL insertar_talla('32', 4);
+CALL insertar_talla('34', 4);
+CALL insertar_talla('36', 4);
+CALL insertar_talla('38', 4);
+
+-- Para la subcategoría 5
+CALL insertar_talla('S', 5);
+CALL insertar_talla('M', 5);
+CALL insertar_talla('L', 5);
+CALL insertar_talla('XL', 5);
+CALL insertar_talla('XXL', 5);
+
+-- Para la subcategoría 6
+CALL insertar_talla('S', 6);
+CALL insertar_talla('M', 6);
+CALL insertar_talla('L', 6);
+CALL insertar_talla('XL', 6);
+CALL insertar_talla('XXL', 6);
+
+-- Inserciones en tb_estado_pedidos
+CALL insertar_estado_pedido('En espera');
+CALL insertar_estado_pedido('Procesando');
+CALL insertar_estado_pedido('Enviado');
+CALL insertar_estado_pedido('Entregado');
+CALL insertar_estado_pedido('Cancelado');
+
+-- Inserciones en tb_estado_valo
+CALL insertar_estado_valo('Habilitada');
+CALL insertar_estado_valo('Deshabilitada');
+
+CALL insertar_cliente('Juan', 'Pérez', '12399678-9', '12345678', 'juan@example.com', 'password123');
+CALL insertar_cliente('María', 'Gómez', '97765432-1', '98765432', 'maria@example.com', 'password456');
+CALL insertar_cliente('Pedro', 'Martínez', '45678921-2', '45678901', 'pedro@example.com', 'password789');
+CALL insertar_cliente('Laura', 'Rodríguez', '78902234-3', '78901234', 'laura@example.com', 'passwordabc');
+CALL insertar_cliente('Carlos', 'Sánchez', '56789012-4', '56789012', 'carlos@example.com', 'passworddef');
+CALL insertar_cliente('Ana', 'López', '89012345-5', '89012345', 'ana@example.com', 'passwordghi');
+CALL insertar_cliente('Luis', 'González', '23456989-0', '23456789', 'luis@example.com', 'passwordjkl');
+CALL insertar_cliente('Elena', 'Fernández', '67850123-6', '67890123', 'elena@example.com', 'passwordmno');
+CALL insertar_cliente('David', 'Díaz', '01534567-8', '01234567', 'david@example.com', 'passwordpqr');
+CALL insertar_cliente('Sara', 'Ruiz', '34567891-1', '34567890', 'sara@example.com', 'passwordstu');
+CALL insertar_cliente('Javier', 'Jiménez', '90123459-7', '90123456', 'javier@example.com', 'passwordvwx');
+CALL insertar_cliente('Paula', 'Alvarez', '41678261-2', '45678701', 'paula@example.com', 'passwordyz1');
+CALL insertar_cliente('Miguel', 'Hernández', '79901234-4', '78301234', 'miguel@example.com', 'password234');
+CALL insertar_cliente('Carmen', 'Torres', '12346678-0', '15345678', 'carmen@example.com', 'password567');
+CALL insertar_cliente('Diego', 'Vázquez', '98765832-3', '98765732', 'diego@example.com', 'password890');
+CALL insertar_cliente('Eva', 'Romero', '23456789-5', '21456789', 'eva@example.com', 'passwordabc2');
+CALL insertar_cliente('Manuel', 'Moreno', '67890123-1', '67898123', 'manuel@example.com', 'passworddef3');
+CALL insertar_cliente('Isabel', 'Serrano', '01234567-6', '01233567', 'isabel@example.com', 'passwordghi4');
+CALL insertar_cliente('Pablo', 'Ortega', '34567890-7', '34567899', 'pablo@example.com', 'passwordjkl5');
+CALL insertar_cliente('Raquel', 'Navarro', '90123456-8', '90173456', 'raquel@example.com', 'passwordmno6');
+CALL insertar_cliente('Oscar', 'Molina', '45678901-9', '45678101', 'oscar@example.com', 'passwordpqr7');
+CALL insertar_cliente('Natalia', 'Iglesias', '78901234-0', '78901284', 'natalia@example.com', 'passwordstu8');
+CALL insertar_cliente('Roberto', 'Garrido', '12345678-1', '12345674', 'roberto@example.com', 'passwordvwx9');
+CALL insertar_cliente('Cristina', 'Ramos', '98765432-0', '980s65432', 'cristina@example.com', 'passwordyz10');
+CALL insertar_cliente('Daniel', 'Grandos', '12377678-9', '12345638', 'correo@example.com', 'ricaldoneSoftware');
+
+CALL insertar_direccion_cliente('Calle 1, Ciudad 1', 1); -- Cliente Juan
+CALL insertar_direccion_cliente('Avenida 2, Ciudad 2', 2); -- Cliente María
+CALL insertar_direccion_cliente('Calle 3, Ciudad 3', 3); -- Cliente Pedro
+CALL insertar_direccion_cliente('Avenida 4, Ciudad 4', 4); -- Cliente Laura
+CALL insertar_direccion_cliente('Calle 5, Ciudad 5', 5); -- Cliente Carlos
+CALL insertar_direccion_cliente('Avenida 6, Ciudad 6', 6); -- Cliente Ana
+CALL insertar_direccion_cliente('Calle 7, Ciudad 7', 7); -- Cliente Luis
+CALL insertar_direccion_cliente('Avenida 8, Ciudad 8', 8); -- Cliente Elena
+CALL insertar_direccion_cliente('Calle 9, Ciudad 9', 9); -- Cliente David
+CALL insertar_direccion_cliente('Avenida 10, Ciudad 10', 10); -- Cliente Sara
+CALL insertar_direccion_cliente('Calle 11, Ciudad 11', 11); -- Cliente Javier
+CALL insertar_direccion_cliente('Avenida 12, Ciudad 12', 12); -- Cliente Paula
+CALL insertar_direccion_cliente('Calle 13, Ciudad 13', 13); -- Cliente Miguel
+CALL insertar_direccion_cliente('Avenida 14, Ciudad 14', 14); -- Cliente Carmen
+CALL insertar_direccion_cliente('Calle 15, Ciudad 15', 15); -- Cliente Diego
+CALL insertar_direccion_cliente('Avenida 16, Ciudad 16', 16); -- Cliente Eva
+CALL insertar_direccion_cliente('Calle 17, Ciudad 17', 17); -- Cliente Manuel
+CALL insertar_direccion_cliente('Avenida 18, Ciudad 18', 18); -- Cliente Isabel
+CALL insertar_direccion_cliente('Calle 19, Ciudad 19', 19); -- Cliente Pablo
+CALL insertar_direccion_cliente('Avenida 20, Ciudad 20', 20); -- Cliente Raquel
+CALL insertar_direccion_cliente('Calle 21, Ciudad 21', 21); -- Cliente Oscar
+CALL insertar_direccion_cliente('Avenida 22, Ciudad 22', 22); -- Cliente Natalia
+CALL insertar_direccion_cliente('Calle 23, Ciudad 23', 23); -- Cliente Roberto
+CALL insertar_direccion_cliente('Avenida 24, Ciudad 24', 24); -- Cliente Cristina
+CALL insertar_direccion_cliente('Avenida Ricaldone, Ciudad 25', 25); -- Cliente Daniel
+
+
+CALL insertar_pedido(NOW(), 1, 1, 1); -- Pedido 1
+CALL insertar_pedido(NOW(), 1, 2, 2); -- Pedido 2
+CALL insertar_pedido(NOW(), 2, 3, 3); -- Pedido 3
+CALL insertar_pedido(NOW(), 2, 4, 4); -- Pedido 4
+CALL insertar_pedido(NOW(), 1, 5, 5); -- Pedido 5
+CALL insertar_pedido(NOW(), 1, 6, 6); -- Pedido 6
+CALL insertar_pedido(NOW(), 2, 7, 7); -- Pedido 7
+CALL insertar_pedido(NOW(), 2, 8, 8); -- Pedido 8
+CALL insertar_pedido(NOW(), 1, 9, 9); -- Pedido 9
+CALL insertar_pedido(NOW(), 1, 10, 10); -- Pedido 10
+CALL insertar_pedido(NOW(), 2, 11, 11); -- Pedido 11
+CALL insertar_pedido(NOW(), 2, 12, 12); -- Pedido 12
+CALL insertar_pedido(NOW(), 1, 13, 13); -- Pedido 13
+CALL insertar_pedido(NOW(), 1, 14, 14); -- Pedido 14
+CALL insertar_pedido(NOW(), 2, 15, 15); -- Pedido 15
+CALL insertar_pedido(NOW(), 2, 16, 16); -- Pedido 16
+CALL insertar_pedido(NOW(), 1, 17, 17); -- Pedido 17
+CALL insertar_pedido(NOW(), 1, 18, 18); -- Pedido 18
+CALL insertar_pedido(NOW(), 2, 19, 19); -- Pedido 19
+CALL insertar_pedido(NOW(), 2, 20, 20); -- Pedido 20
+CALL insertar_pedido(NOW(), 1, 21, 21); -- Pedido 21
+CALL insertar_pedido(NOW(), 1, 22, 22); -- Pedido 22
+CALL insertar_pedido(NOW(), 2, 23, 23); -- Pedido 23
+CALL insertar_pedido(NOW(), 2, 24, 24); -- Pedido 24
+CALL insertar_pedido(NOW(), 1, 25, 25); -- Pedido 25
+
+-- 25 registros para InsertarDetalleProducto
+CALL insertar_detalle_producto(50, '/ruta/imagen1.jpg', 1, 1, 1);
+CALL insertar_detalle_producto(30, '/ruta/imagen2.jpg', 2, 2, 2);
+CALL insertar_detalle_producto(40, '/ruta/imagen3.jpg', 3, 3, 3);
+CALL insertar_detalle_producto(20, '/ruta/imagen4.jpg', 4, 4, 4);
+CALL insertar_detalle_producto(60, '/ruta/imagen5.jpg', 5, 5, 5);
+CALL insertar_detalle_producto(25, '/ruta/imagen6.jpg', 1, 1, 6);
+CALL insertar_detalle_producto(35, '/ruta/imagen7.jpg', 2, 2, 7);
+CALL insertar_detalle_producto(45, '/ruta/imagen8.jpg', 3, 3, 8);
+CALL insertar_detalle_producto(15, '/ruta/imagen9.jpg', 4, 4, 9);
+CALL insertar_detalle_producto(55, '/ruta/imagen10.jpg', 5, 5, 10);
+CALL insertar_detalle_producto(10, '/ruta/imagen11.jpg', 1, 1, 11);
+CALL insertar_detalle_producto(70, '/ruta/imagen12.jpg', 2, 2, 12);
+CALL insertar_detalle_producto(80, '/ruta/imagen13.jpg', 3, 3, 13);
+CALL insertar_detalle_producto(90, '/ruta/imagen14.jpg', 4, 4, 14);
+CALL insertar_detalle_producto(100, '/ruta/imagen15.jpg', 5, 5, 15);
+CALL insertar_detalle_producto(110, '/ruta/imagen16.jpg', 1, 1, 16);
+CALL insertar_detalle_producto(120, '/ruta/imagen17.jpg', 2, 2, 17);
+CALL insertar_detalle_producto(130, '/ruta/imagen18.jpg', 3, 3, 18);
+CALL insertar_detalle_producto(140, '/ruta/imagen19.jpg', 4, 4, 19);
+CALL insertar_detalle_producto(150, '/ruta/imagen20.jpg', 5, 5, 20);
+CALL insertar_detalle_producto(160, '/ruta/imagen21.jpg', 1, 1, 21);
+CALL insertar_detalle_producto(170, '/ruta/imagen22.jpg', 2, 2, 22);
+CALL insertar_detalle_producto(180, '/ruta/imagen23.jpg', 3, 3, 23);
+CALL insertar_detalle_producto(190, '/ruta/imagen24.jpg', 4, 4, 24);
+CALL insertar_detalle_producto(200, '/ruta/imagen25.jpg', 5, 5, 25);
+
+
+
+-- Para el Pedido 1
+CALL insertar_detalle_pedido(2, 35.99, 1, 1);
+CALL insertar_detalle_pedido(1, 29.99, 1, 2);
+CALL insertar_detalle_pedido(3, 42.99, 1, 3);
+
+-- Para el Pedido 2
+CALL insertar_detalle_pedido(1, 19.99, 2, 4);
+CALL insertar_detalle_pedido(2, 39.99, 2, 5);
+CALL insertar_detalle_pedido(1, 25.99, 2, 6);
+
+-- Para el Pedido 3
+CALL insertar_detalle_pedido(3, 29.99, 3, 7);
+CALL insertar_detalle_pedido(1, 49.99, 3, 8);
+CALL insertar_detalle_pedido(2, 35.99, 3, 9);
+
+-- Para el Pedido 4
+CALL insertar_detalle_pedido(2, 39.99, 4, 10);
+CALL insertar_detalle_pedido(1, 19.99, 4, 11);
+CALL insertar_detalle_pedido(1, 45.99, 4, 12);
+
+-- Para el Pedido 5
+CALL insertar_detalle_pedido(1, 29.99, 5, 13);
+CALL insertar_detalle_pedido(2, 35.99, 5, 14);
+CALL insertar_detalle_pedido(1, 25.99, 5, 15);
+
+-- Para el Pedido 6
+CALL insertar_detalle_pedido(3, 42.99, 6, 16);
+CALL insertar_detalle_pedido(1, 19.99, 6, 17);
+CALL insertar_detalle_pedido(2, 39.99, 6, 18);
+
+-- Para el Pedido 7
+CALL insertar_detalle_pedido(1, 29.99, 7, 19);
+CALL insertar_detalle_pedido(2, 35.99, 7, 20);
+CALL insertar_detalle_pedido(1, 25.99, 7, 21);
+
+-- Para el Pedido 8
+CALL insertar_detalle_pedido(3, 42.99, 8, 22);
+CALL insertar_detalle_pedido(1, 19.99, 8, 23);
+CALL insertar_detalle_pedido(2, 39.99, 8, 24);
+
+-- Para el Pedido 9
+CALL insertar_detalle_pedido(1, 29.99, 9, 25);
+CALL insertar_detalle_pedido(2, 35.99, 9, 1);
+CALL insertar_detalle_pedido(1, 25.99, 9, 2);
+
+-- Para el Pedido 10
+CALL insertar_detalle_pedido(3, 42.99, 10, 3);
+CALL insertar_detalle_pedido(1, 19.99, 10, 4);
+CALL insertar_detalle_pedido(2, 39.99, 10, 5);
+
+-- Para el Pedido 11
+CALL insertar_detalle_pedido(1, 29.99, 11, 6);
+CALL insertar_detalle_pedido(2, 35.99, 11, 7);
+CALL insertar_detalle_pedido(1, 25.99, 11, 8);
+
+-- Para el Pedido 12
+CALL insertar_detalle_pedido(3, 42.99, 12, 9);
+CALL insertar_detalle_pedido(1, 19.99, 12, 10);
+CALL insertar_detalle_pedido(2, 39.99, 12, 11);
+
+-- Para el Pedido 13
+CALL insertar_detalle_pedido(1, 29.99, 13, 12);
+CALL insertar_detalle_pedido(2, 35.99, 13, 13);
+CALL insertar_detalle_pedido(1, 25.99, 13, 14);
+
+-- Para el Pedido 14
+CALL insertar_detalle_pedido(3, 42.99, 14, 15);
+CALL insertar_detalle_pedido(1, 19.99, 14, 16);
+CALL insertar_detalle_pedido(2, 39.99, 14, 17);
+
+-- Para el Pedido 15
+CALL insertar_detalle_pedido(1, 29.99, 15, 18);
+CALL insertar_detalle_pedido(2, 35.99, 15, 19);
+CALL insertar_detalle_pedido(1, 25.99, 15, 20);
+
+-- Para el Pedido 16
+CALL insertar_detalle_pedido(3, 42.99, 16, 21);
+CALL insertar_detalle_pedido(1, 19.99, 16, 22);
+CALL insertar_detalle_pedido(2, 39.99, 16, 23);
+
+-- Para el Pedido 17
+CALL insertar_detalle_pedido(1, 29.99, 17, 24);
+CALL insertar_detalle_pedido(2, 35.99, 17, 25);
+CALL insertar_detalle_pedido(1, 25.99, 17, 1);
+
+-- Para el Pedido 18
+CALL insertar_detalle_pedido(3, 42.99, 18, 2);
+CALL insertar_detalle_pedido(1, 19.99, 18, 3);
+CALL insertar_detalle_pedido(2, 39.99, 18, 4);
+
+-- Para el Pedido 19
+CALL insertar_detalle_pedido(1, 29.99, 19, 5);
+CALL insertar_detalle_pedido(2, 35.99, 19, 6);
+CALL insertar_detalle_pedido(1, 25.99, 19, 7);
+
+-- Para el Pedido 20
+CALL insertar_detalle_pedido(3, 42.99, 20, 8);
+CALL insertar_detalle_pedido(1, 19.99, 20, 9);
+CALL insertar_detalle_pedido(2, 39.99, 20, 10);
+
+-- Para el Pedido 21
+CALL insertar_detalle_pedido(1, 29.99, 21, 11);
+CALL insertar_detalle_pedido(2, 35.99, 21, 12);
+CALL insertar_detalle_pedido(1, 25.99, 21, 13);
+
+-- Para el Pedido 22
+CALL insertar_detalle_pedido(3, 42.99, 22, 14);
+CALL insertar_detalle_pedido(1, 19.99, 22, 15);
+CALL insertar_detalle_pedido(2, 39.99, 22, 16);
+
+-- Para el Pedido 23
+CALL insertar_detalle_pedido(1, 29.99, 23, 17);
+CALL insertar_detalle_pedido(2, 35.99, 23, 18);
+CALL insertar_detalle_pedido(1, 25.99, 23, 19);
+
+-- Para el Pedido 24
+CALL insertar_detalle_pedido(3, 42.99, 24, 17);
+CALL insertar_detalle_pedido(1, 19.99, 24, 18);
+CALL insertar_detalle_pedido(2, 39.99, 24, 19);
+
+-- Para el Pedido 25
+CALL insertar_detalle_pedido(1, 29.99, 25, 20);
+CALL insertar_detalle_pedido(2, 35.99, 25, 21);
+CALL insertar_detalle_pedido(1, 25.99, 25, 22);
+
+
+-- 25 registros para InsertarValoracion
+CALL insertar_valoracion('Excelente producto', NOW(), 1, 1);
+CALL insertar_valoracion('Muy satisfecho con mi compra', NOW(), 2, 1);
+CALL insertar_valoracion('Buena calidad', NOW(), 3, 1);
+CALL insertar_valoracion('Rápido envío', NOW(), 4, 1);
+CALL insertar_valoracion('Me encanta', NOW(), 5, 1);
+CALL insertar_valoracion('Buen precio', NOW(), 6, 1);
+CALL insertar_valoracion('Muy cómodo', NOW(), 7, 1);
+CALL insertar_valoracion('Perfecto para mí', NOW(), 8, 1);
+CALL insertar_valoracion('Muy bonito', NOW(), 9, 1);
+CALL insertar_valoracion('Excelente servicio', NOW(), 10, 1);
+CALL insertar_valoracion('Lo recomiendo', NOW(), 11, 1);
+CALL insertar_valoracion('Fácil de usar', NOW(), 12, 1);
+CALL insertar_valoracion('Muy elegante', NOW(), 13, 1);
+CALL insertar_valoracion('Envío rápido', NOW(), 14, 1);
+CALL insertar_valoracion('Muy práctico', NOW(), 15, 1);
+CALL insertar_valoracion('Satisfecho con mi compra', NOW(), 16, 1);
+CALL insertar_valoracion('Producto de calidad', NOW(), 17, 1);
+CALL insertar_valoracion('Buena atención al cliente', NOW(), 18, 1);
+CALL insertar_valoracion('Buen producto', NOW(), 19, 1);
+CALL insertar_valoracion('Muy recomendado', NOW(), 20, 1);
+CALL insertar_valoracion('Excelente experiencia', NOW(), 21, 1);
+CALL insertar_valoracion('Muy contento con mi compra', NOW(), 22, 1);
+CALL insertar_valoracion('Me gusta mucho', NOW(), 23, 1);
+CALL insertar_valoracion('Producto recomendado', NOW(), 24, 1);
+CALL insertar_valoracion('Cumple con mis expectativas', NOW(), 25, 1);
