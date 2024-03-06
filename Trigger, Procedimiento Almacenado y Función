@@ -13,7 +13,7 @@ DELIMITER ;
 
 
 
------- 
+------ Procedimiento almacenado que actualiza el precio de las existencias si estas son inferiores a 10 
 DELIMITER //
 
  
@@ -34,3 +34,35 @@ END //
  
 
 DELIMITER ;
+
+
+---- Funcion que devuelve la suma de las existencias 
+
+DELIMITER //
+CREATE FUNCTION obtener_cantidad_existencias(id_sub_categoria INT) RETURNS INT
+BEGIN
+    DECLARE total_existencias INT;
+    SELECT SUM(dp.existencias) INTO total_existencias
+    FROM tb_detalle_productos dp
+    INNER JOIN tb_productos p ON dp.id_producto = p.id_producto
+    WHERE p.id_sub_categoria = id_sub_categoria;
+    RETURN total_existencias;
+END //
+DELIMITER ;
+
+
+--- Trigger que se activa automaticamente luego de insertar un registro en la tabla productos (Actualiza fecha y hora actual)
+
+DELIMITER //
+CREATE TRIGGER tr_actualizar_fecha_registro AFTER INSERT ON tb_productos
+FOR EACH ROW
+BEGIN
+    UPDATE tb_productos
+    SET fecha_registro_produc = NOW()
+    WHERE id_producto = NEW.id_producto;
+END //
+DELIMITER ;
+
+
+
+----- 
